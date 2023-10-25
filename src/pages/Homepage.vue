@@ -1,5 +1,5 @@
 <script>
-
+import axios from 'axios';
 import { RouterLink } from 'vue-router';
 
 
@@ -12,9 +12,28 @@ export default {
 
     data() {
         return {
-           
+           doctors:[],
+           myUrl: 'http://localhost:8000',
         }
-    }}
+    },
+    methods: {
+        getDoctors(){
+            axios.get(`${this.myUrl}/api/doctors`)
+                .then(response => {
+                    this.doctors = response.data.results;
+                    console.log(this.doctors);
+                })
+                .catch(error => {
+                    console.error(error);
+                });
+        }
+
+
+    },
+    mounted(){
+        this.getDoctors();
+    }
+}
     
 </script>
 
