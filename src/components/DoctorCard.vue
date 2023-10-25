@@ -16,8 +16,7 @@ export default{
 </script>
 
 <template>
-
-<div class="card" style="width: 18rem;">
+<div class="card" style="width: 11rem;">
   <img :src= "`${doctor.photo}`" class="card-img-top" alt="...">
   <div class="card-body">
     <h5 class="card-title">Card title</h5>
@@ -25,7 +24,7 @@ export default{
     <div v-for="(element, index) in doctor.typologies" :key="index">
         <span class="card-text">{{element.name}}</span>
     </div> 
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+    <a href="#" class="btn btn-primary">Info</a>
   </div>
 </div>
 </template>

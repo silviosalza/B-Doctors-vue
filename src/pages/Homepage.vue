@@ -42,8 +42,13 @@ export default {
 
 <template>
     <h1>homepage</h1>
-    <div v-for="(element , index) in doctors" :key="index">
-        <DoctorCard :doctor="element"/>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 col-6 col-sm-4 col-xl-2" v-for="(element , index) in doctors" :key="index">
+                <DoctorCard :doctor="element"/>
+            </div>
+        </div>
+
     </div>
 
         
