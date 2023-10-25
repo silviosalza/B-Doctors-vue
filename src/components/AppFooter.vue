@@ -3,13 +3,16 @@
 </script>
 
 <template>
-    <h1>footer</h1>
+  <footer>
+    <div class="container">
+      <h1>footer</h1>
 
-        
+    </div>
+
+  </footer>
 </template>
 
 
 <style scoped lang="scss">
 @use "../styles/general.scss" as *;
-
 </style>
