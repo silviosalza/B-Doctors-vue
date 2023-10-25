@@ -1,14 +1,17 @@
 <script>
 import axios from 'axios';
 import { RouterLink } from 'vue-router';
+import DoctorCard from '../components/DoctorCard.vue';
+
 
 
 
 
 export default {
     components: {
-        RouterLink,
-    },
+    RouterLink,
+    DoctorCard
+},
 
     data() {
         return {
@@ -39,6 +42,9 @@ export default {
 
 <template>
     <h1>homepage</h1>
+    <div v-for="(element , index) in doctors" :key="index">
+        <DoctorCard :doctor="element"/>
+    </div>
 
         
 </template>
