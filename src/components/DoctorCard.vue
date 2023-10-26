@@ -19,7 +19,7 @@ export default {
   <div class="card mb-5" style="height: 25rem;">
     <img :src="`${doctor.photo}`" class="card-img-top" alt="...">
     <div class="card-body d-flex flex-column justify-content-between">
-      <h5 class="card-title">{{ doctor.user_id }}</h5>
+      <h5 class="card-title">{{ doctor.user.name }}</h5>
       <p class="card-text">{{ doctor.services }}</p>
       <div class="">
         <span v-for="(element, index) in doctor.typologies" :key="index" class="card-text">{{ element.name }}{{ index
