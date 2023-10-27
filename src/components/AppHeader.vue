@@ -1,6 +1,6 @@
 <script>
 import { RouterLink } from 'vue-router';
-
+import { store } from '../store';
 
 
 export default {
@@ -10,7 +10,7 @@ export default {
 
   data() {
     return {
-
+      store
     }
   }
 }

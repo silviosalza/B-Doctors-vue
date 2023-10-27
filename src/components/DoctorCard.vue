@@ -1,5 +1,5 @@
 <script>
-
+import { store } from '../store';
 export default {
   namae: "DoctorCard",
   props: {
@@ -10,6 +10,7 @@ export default {
     return {
       // myUrl: 'http://localhost:8000',
       // doctors: [],
+      store
     }
   }
 }
